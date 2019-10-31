@@ -30,7 +30,10 @@ public class meu1servlet extends HttpServlet {
             throws ServletException, IOException {
      String nome = request.getParameter("nome");
      String sobrenome = request.getParameter("sobrenome");
-     System.out.println("Nome completo: "+nome+" "+sobrenome);
+     String nomeCompleto = nome+" "+sobrenome;
+     System.out.println("Nome completo: "+nomeCompleto);
+     response.sendRedirect("teste.jsp");
+     
         
     }
 
