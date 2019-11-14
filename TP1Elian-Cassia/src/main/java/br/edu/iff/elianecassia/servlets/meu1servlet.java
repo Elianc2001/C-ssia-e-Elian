@@ -1,15 +1,22 @@
+package br.edu.iff.elianecassia.servlets;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
 
+import br.edu.iff.elianecassia.entidades.Usuario;
+import br.edu.iff.elianecassia.utilidades.HibernateUtil;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.math.BigDecimal;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import org.hibernate.Session;
+import org.hibernate.Transaction;
 
 /**
  *
@@ -32,6 +39,22 @@ public class meu1servlet extends HttpServlet {
      String sobrenome = request.getParameter("sobrenome");
      String nomeCompleto = nome+" "+sobrenome;
      System.out.println("Nome completo: "+nomeCompleto);
+     String senha = request.getParameter("senha");
+     
+     Usuario user = new Usuario ();
+     user.setNome(nomeCompleto);
+     user.setSenha(senha);
+     
+     Double aleatorio = Math.random();
+     BigDecimal id = new BigDecimal (aleatorio); 
+     user.setIdUsuario(id);
+     
+    Session sessaoBD = HibernateUtil.getSession();
+    Transaction tr = sessaoBD.getTransaction();
+    sessaoBD.save(user);
+     tr.commit();
+     sessaoBD.close();
+     
      response.sendRedirect("teste.jsp");
      
         

@@ -2,7 +2,7 @@
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
     <servlet>
         <servlet-name>meu1servlet</servlet-name>
-        <servlet-class>meu1servlet</servlet-class>
+        <servlet-class>br.edu.iff.elianecassia.servlets.meu1servlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>meu1servlet</servlet-name>
