@@ -1,1 +1,4 @@
 br/edu/iff/elianecassia/entidades/Usuario_.class
+br/edu/iff/elianecassia/entidades/Usuario.class
+br/edu/iff/elianecassia/servlets/meu1servlet.class
+br/edu/iff/elianecassia/utilidades/HibernateUtil.class

@@ -107,7 +107,7 @@
         </select>
     </div--%>
   </fieldset>
-  <%--fieldset>
+  <fieldset>
     <legend>Dados de documentos</legend>
     <div>
     <label for="rg">RG: </label>
@@ -120,7 +120,7 @@
 </fieldset>
 
 <br />
-<!-- ENDEREÇO -->
+<%---- ENDEREÇO -->
 <fieldset>
  <legend>Dados de Endereço</legend>
  <div>

@@ -40,10 +40,15 @@ public class meu1servlet extends HttpServlet {
      String nomeCompleto = nome+" "+sobrenome;
      System.out.println("Nome completo: "+nomeCompleto);
      String senha = request.getParameter("senha");
+     String rg = request.getParameter("doc_rg");
+     cpf = Integer.parseInt("doc_cpf");
+     
      
      Usuario user = new Usuario ();
      user.setNome(nomeCompleto);
      user.setSenha(senha);
+     user.setdoc_rg(rg);
+     user.setdoc_cpf(cpf);
      
      Double aleatorio = Math.random();
      BigDecimal id = new BigDecimal (aleatorio); 

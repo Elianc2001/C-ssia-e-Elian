@@ -45,6 +45,8 @@ public class Usuario implements Serializable {
     @Size(max = 2147483647)
     @Column(name = "senha")
     private String senha;
+    private String doc_rg;
+    private String doc_cpf;
 
     public Usuario() {
     }
@@ -76,7 +78,18 @@ public class Usuario implements Serializable {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-
+    public String getdoc_rg(){
+        return doc_rg;
+    }
+    public void setdoc_rg(String doc_rg){
+        this.doc_rg = doc_rg;
+    }
+    public void setdoc_cpf(String doc_cpf){
+        this.doc_cpf = doc_cpf;
+    }
+    public String getdoc_cpf(){
+        return doc_cpf;
+    }
     @Override
     public int hashCode() {
         int hash = 0;
@@ -100,6 +113,14 @@ public class Usuario implements Serializable {
     @Override
     public String toString() {
         return "TP1ElianCassia.Usuario[ idUsuario=" + idUsuario + " ]";
+    }
+
+    public void setdoc_rg(int rg) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    public void setdoc_cpf(int cpf) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }
